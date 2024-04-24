@@ -1,7 +1,11 @@
+import BannerSlider from "../components/BannerSlider";
+import HomeCard from "../components/HomeCard";
+
 const Home = () => {
   return (
-    <div>
-      <h1>This is Home</h1>
+    <div className="container mx-auto">
+      <BannerSlider></BannerSlider>
+      <HomeCard></HomeCard>
     </div>
   );
 };

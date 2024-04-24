@@ -1,0 +1,80 @@
+[
+  {
+    "image": "https://example.com/estate1.jpg",
+    "estate_title": "Luxury Villa in Beverly Hills",
+    "id": "RH001",
+    "segment_name": "Luxury",
+    "description": "Stunning luxury villa with panoramic views of Los Angeles. Modern design with state-of-the-art amenities.",
+    "price": "$5,000,000",
+    "status": "sale",
+    "area": "6,000 sq ft",
+    "location": "Beverly Hills, CA",
+    "facilities": ["5 bedrooms", "infinity pool", "home theater"],
+    "button": "View Property"
+  },
+  {
+    "image": "https://example.com/estate2.jpg",
+    "estate_title": "Cozy Suburban Home",
+    "id": "RH002",
+    "segment_name": "Family",
+    "description": "Charming suburban home perfect for families. Spacious backyard, quiet neighborhood, and excellent school district.",
+    "price": "$400,000",
+    "status": "sale",
+    "area": "2,500 sq ft",
+    "location": "Suburbia, OH",
+    "facilities": ["3 bedrooms", "backyard patio", "playroom"],
+    "button": "View Property"
+  },
+  {
+    "image": "https://example.com/estate3.jpg",
+    "estate_title": "Downtown Loft Apartment",
+    "id": "RH003",
+    "segment_name": "Urban",
+    "description": "Chic loft apartment in the heart of downtown. Industrial design with exposed brick and high ceilings.",
+    "price": "$2,500/month",
+    "status": "rent",
+    "area": "1,200 sq ft",
+    "location": "Downtown, NY",
+    "facilities": ["1 bedroom", "rooftop terrace", "gym"],
+    "button": "View Property"
+  },
+  {
+    "image": "https://example.com/estate4.jpg",
+    "estate_title": "Lakefront Cabin Retreat",
+    "id": "RH004",
+    "segment_name": "Rural",
+    "description": "Rustic cabin nestled by the lake, perfect for a weekend getaway. Serene surroundings and outdoor activities.",
+    "price": "$300/night",
+    "status": "rent",
+    "area": "800 sq ft",
+    "location": "Lake Country, WA",
+    "facilities": ["2 bedrooms", "private dock", "fire pit"],
+    "button": "View Property"
+  },
+  {
+    "image": "https://example.com/estate5.jpg",
+    "estate_title": "Ocean View Condo",
+    "id": "RH005",
+    "segment_name": "Luxury",
+    "description": "Luxurious oceanfront condo with breathtaking views. Exclusive amenities including beach access and spa.",
+    "price": "$1,200,000",
+    "status": "sale",
+    "area": "1,800 sq ft",
+    "location": "Miami Beach, FL",
+    "facilities": ["3 bedrooms", "balcony", "fitness center"],
+    "button": "View Property"
+  },
+  {
+    "image": "https://example.com/estate6.jpg",
+    "estate_title": "Mountain Retreat Chalet",
+    "id": "RH006",
+    "segment_name": "Nature",
+    "description": "Secluded chalet nestled in the mountains. Perfect for outdoor enthusiasts seeking tranquility.",
+    "price": "$700,000",
+    "status": "sale",
+    "area": "3,500 sq ft",
+    "location": "Aspen, CO",
+    "facilities": ["4 bedrooms", "hot tub", "ski-in/ski-out access"],
+    "button": "View Property"
+  }
+]

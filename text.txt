@@ -2,3 +2,4 @@ Pakeages Used
 1. Tailwind CSS
 2. DaisyUi
 3. React Router
+4. Swiper Slider
