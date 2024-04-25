@@ -3,3 +3,52 @@ Pakeages Used
 2. DaisyUi
 3. React Router
 4. Swiper Slider
+5. React Icons
+6. React Helmet
+7. Firebase
+
+
+https://i.ibb.co/jW1wQgn/home1-1.jpg
+https://i.ibb.co/T085R3T/home1-2.jpg
+https://i.ibb.co/6B49LP2/home1-3.jpg
+
+https://i.ibb.co/GJgBgrZ/home2-1.jpg
+https://i.ibb.co/DDMSQtt/home2-2.jpg
+https://i.ibb.co/X3fD6CG/home2-3.jpg
+
+https://i.ibb.co/2YRXZhC/home3-1.jpg
+https://i.ibb.co/s2JWcLd/home3-2.jpg
+https://i.ibb.co/T2YCk26/home3-3.jpg
+
+https://i.ibb.co/tMR1Xnc/home4-1.jpg
+https://i.ibb.co/LJb0M8j/home4-2.jpg
+https://i.ibb.co/RScGK9h/home4-3.jpg
+
+https://i.ibb.co/V3h23n5/home5-1.jpg
+https://i.ibb.co/DYz4zCH/home5-2.jpg
+https://i.ibb.co/2vKNq4g/home5-3.jpg
+
+https://i.ibb.co/HP2Y3gS/home6-1.jpg
+https://i.ibb.co/3Bmm1r6/home6-2.jpg
+https://i.ibb.co/wwFN8HJ/home6-3.jpg
+
+
+<Swiper
+  spaceBetween={50}
+  slidesPerView={1}
+  onSlideChange={() => console.log("slide change")}
+  onSwiper={(swiper) => console.log(swiper)}
+>
+  <SwiperSlide>
+    <img className="w-full h-screen" src="/src/assets/homes/home1.1.jpg" />
+  </SwiperSlide>
+  <SwiperSlide>
+    <img className="w-full h-screen" src="/src/assets/homes/home2.1.jpg" />
+  </SwiperSlide>
+  <SwiperSlide>
+    <img className="w-full h-screen" src="/src/assets/homes/home3.1.jpg" />
+  </SwiperSlide>
+  <SwiperSlide>
+    <img className="w-full h-screen" src="/src/assets/homes/home4.1.jpg" />
+  </SwiperSlide>
+</Swiper>

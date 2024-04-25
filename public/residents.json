@@ -1,6 +1,8 @@
 [
   {
-    "image": "https://example.com/estate1.jpg",
+    "image1": "https://i.ibb.co/jW1wQgn/home1-1.jpg",
+    "image2": "https://i.ibb.co/T085R3T/home1-2.jpg",
+    "image3": "https://i.ibb.co/6B49LP2/home1-3.jpg",
     "estate_title": "Luxury Villa in Beverly Hills",
     "id": "RH001",
     "segment_name": "Luxury",
@@ -13,7 +15,9 @@
     "button": "View Property"
   },
   {
-    "image": "https://example.com/estate2.jpg",
+    "image1": "https://i.ibb.co/GJgBgrZ/home2-1.jpg",
+    "image2": "https://i.ibb.co/DDMSQtt/home2-2.jpg",
+    "image3": "https://i.ibb.co/X3fD6CG/home2-3.jpg",
     "estate_title": "Cozy Suburban Home",
     "id": "RH002",
     "segment_name": "Family",
@@ -26,7 +30,9 @@
     "button": "View Property"
   },
   {
-    "image": "https://example.com/estate3.jpg",
+    "image1": "https://i.ibb.co/2YRXZhC/home3-1.jpg",
+    "image2": "https://i.ibb.co/s2JWcLd/home3-2.jpg",
+    "image3": "https://i.ibb.co/T2YCk26/home3-3.jpg",
     "estate_title": "Downtown Loft Apartment",
     "id": "RH003",
     "segment_name": "Urban",
@@ -39,7 +45,9 @@
     "button": "View Property"
   },
   {
-    "image": "https://example.com/estate4.jpg",
+    "image1": "https://i.ibb.co/tMR1Xnc/home4-1.jpg",
+    "image2": "https://i.ibb.co/LJb0M8j/home4-2.jpg",
+    "image3": "https://i.ibb.co/RScGK9h/home4-3.jpg",
     "estate_title": "Lakefront Cabin Retreat",
     "id": "RH004",
     "segment_name": "Rural",
@@ -52,7 +60,9 @@
     "button": "View Property"
   },
   {
-    "image": "https://example.com/estate5.jpg",
+    "image1": "https://i.ibb.co/V3h23n5/home5-1.jpg",
+    "image2": "https://i.ibb.co/DYz4zCH/home5-2.jpg",
+    "image3": "https://i.ibb.co/2vKNq4g/home5-3.jpg",
     "estate_title": "Ocean View Condo",
     "id": "RH005",
     "segment_name": "Luxury",
@@ -65,7 +75,9 @@
     "button": "View Property"
   },
   {
-    "image": "https://example.com/estate6.jpg",
+    "image1": "https://i.ibb.co/HP2Y3gS/home6-1.jpg",
+    "image2": "https://i.ibb.co/3Bmm1r6/home6-2.jpg",
+    "image3": "https://i.ibb.co/wwFN8HJ/home6-3.jpg",
     "estate_title": "Mountain Retreat Chalet",
     "id": "RH006",
     "segment_name": "Nature",

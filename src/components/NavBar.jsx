@@ -15,16 +15,23 @@ const NavBar = () => {
       <li>
         <NavLink to="/">Home</NavLink>
       </li>
-      <li>
-        <NavLink to="/update-profile">Update Profile</NavLink>
-      </li>
-      <li>
-        <NavLink to="/register">Register</NavLink>
-      </li>
+      {user && (
+        <li>
+          <NavLink to="/update-profile">Update Profile</NavLink>
+        </li>
+      )}
+      {user ? (
+        <></>
+      ) : (
+        <li>
+          <NavLink to="/register">Register</NavLink>
+        </li>
+      )}
     </>
   );
+
   return (
-    <div className="container mx-auto navbar bg-base-100">
+    <div className="container mx-auto navbar bg-green-100">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -65,7 +72,7 @@ const NavBar = () => {
               </button>
             </>
           ) : (
-            <NavLink to="/login" className="btn">
+            <NavLink to="/login" className="btn bg-cyan-300 hover:bg-cyan-400">
               Log In
             </NavLink>
           )}

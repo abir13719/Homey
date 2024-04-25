@@ -1,29 +1,26 @@
+import { Navigation, Pagination, A11y, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
+import "swiper/swiper-bundle.css";
 
-const BannerSlider = () => {
+const BannerSlider = ({ allHomes }) => {
   return (
-    <>
-      <Swiper
-        spaceBetween={50}
-        slidesPerView={1}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
-      >
-        <SwiperSlide>
-          <img className="w-full h-screen" src="/src/assets/homes/home1.1.jpg" />
+    <Swiper
+      modules={[Navigation, Pagination, A11y, Autoplay]}
+      spaceBetween={50}
+      slidesPerView={1}
+      navigation
+      autoplay={{
+        delay: 2000,
+        disableOnInteraction: false,
+      }}
+      pagination={{ clickable: true }}
+    >
+      {allHomes.map((home) => (
+        <SwiperSlide key={home.image1}>
+          <img className="w-full" src={home.image1} />
         </SwiperSlide>
-        <SwiperSlide>
-          <img className="w-full h-screen" src="/src/assets/homes/home2.1.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className="w-full h-screen" src="/src/assets/homes/home3.1.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className="w-full h-screen" src="/src/assets/homes/home4.1.jpg" />
-        </SwiperSlide>
-      </Swiper>
-    </>
+      ))}
+    </Swiper>
   );
 };
 

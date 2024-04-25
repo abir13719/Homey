@@ -48,7 +48,8 @@ const Register = () => {
             displayName: name,
             photoURL: photo,
           }),
-        setSuccess("User created successfully")
+        setSuccess("User created successfully"),
+        e.target.reset()
       )
       .catch((error) => setProblem(error.message.split("Error")[1].replace(/[()-.]/g, " ")));
   };
@@ -65,13 +66,13 @@ const Register = () => {
       <Helmet>
         <title>Homey | Register</title>
       </Helmet>
-      <div className="container mx-auto  h-[calc(100vh-68px)] flex items-center justify-center">
-        <div className="bg-white/30 backdrop-blur-3xl shadow-2xl p-4 rounded-xl w-[360px]">
+      <div className="container mx-auto  h-[calc(100vh-68px)] flex items-center justify-center loginBg my-5">
+        <div className=" backdrop-blur-3xl shadow-2xl p-4 rounded-xl w-[360px] border border-black">
           <form onSubmit={handleRegister} className="flex flex-col gap-3">
             <h1 className="text-center text-2xl font-medium text-black">Register Your Account</h1>
             <div className="flex items-center justify-between border border-black rounded-full py-2 px-4">
               <input
-                className="text-black w-full bg-transparent border-none outline-none font-medium placeholder:text-gray-800 placeholder:font-medium"
+                className="text-black w-full bg-transparent border-none outline-none font-medium placeholder:text-black placeholder:font-medium"
                 type="text"
                 name="userName"
                 placeholder="User Name"
@@ -81,7 +82,7 @@ const Register = () => {
             </div>
             <div className="flex items-center justify-between border border-black rounded-full py-2 px-4">
               <input
-                className="text-black w-full bg-transparent border-none outline-none font-medium placeholder:text-gray-800 placeholder:font-medium"
+                className="text-black w-full bg-transparent border-none outline-none font-medium placeholder:text-black placeholder:font-medium"
                 type="text"
                 name="photo"
                 placeholder="Photo URL"
@@ -90,7 +91,7 @@ const Register = () => {
             </div>
             <div className="flex items-center justify-between border border-black rounded-full py-2 px-4">
               <input
-                className="text-black w-full bg-transparent border-none outline-none font-medium placeholder:text-gray-800 placeholder:font-medium"
+                className="text-black w-full bg-transparent border-none outline-none font-medium placeholder:text-black placeholder:font-medium"
                 type="email"
                 name="email"
                 placeholder="Email Address"
@@ -101,7 +102,7 @@ const Register = () => {
 
             <div className="flex items-center justify-between border border-black rounded-full py-2 px-4">
               <input
-                className="text-black w-full bg-transparent border-none outline-none font-medium placeholder:text-gray-800 placeholder:font-medium"
+                className="text-black w-full bg-transparent border-none outline-none font-medium placeholder:text-black placeholder:font-medium"
                 type={showPassword ? "text" : "password"}
                 name="password"
                 placeholder="Password"
@@ -111,7 +112,7 @@ const Register = () => {
             </div>
             <div className="flex items-center justify-between border border-black rounded-full py-2 px-4">
               <input
-                className="text-black w-full bg-transparent border-none outline-none font-medium placeholder:text-gray-800 placeholder:font-medium"
+                className="text-black w-full bg-transparent border-none outline-none font-medium placeholder:text-black placeholder:font-medium"
                 type={showCPassword ? "text" : "password"}
                 name="cPassword"
                 placeholder="Confirm Password"

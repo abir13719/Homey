@@ -3,6 +3,8 @@ import Base from "./Base";
 import Home from "../pages/Home";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
+import UpdateProfile from "../pages/UpdateProfile";
+import PrivateRoutes from "./Private/PrivateRoutes";
 
 const router = createBrowserRouter([
   {
@@ -12,6 +14,15 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        loader: () => fetch("residents.json"),
+      },
+      {
+        path: "/update-profile",
+        element: (
+          <PrivateRoutes>
+            <UpdateProfile></UpdateProfile>
+          </PrivateRoutes>
+        ),
       },
       {
         path: "/register",

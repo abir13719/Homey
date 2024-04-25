@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.loginBg {
+  background-image: url(/src/assets/login.jpg);
+}
