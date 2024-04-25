@@ -6,7 +6,9 @@ const NavBar = () => {
   const { user, logOut } = useContext(AuthContext);
 
   const handleLogOut = () => {
-    logOut();
+    logOut()
+      .then(() => console.log("log out"))
+      .catch((error) => console.error(error));
   };
   const navLinks = (
     <>
@@ -18,9 +20,6 @@ const NavBar = () => {
       </li>
       <li>
         <NavLink to="/register">Register</NavLink>
-      </li>
-      <li>
-        <NavLink to="/login">Login</NavLink>
       </li>
     </>
   );
@@ -57,10 +56,20 @@ const NavBar = () => {
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
       <div className="navbar-end">
-        {user ? <p>{user.email}</p> : <button>Log In</button>}
-        <button onClick={handleLogOut} className="btn">
-          Log Out
-        </button>
+        <div className="flex items-center gap-2">
+          {user ? (
+            <>
+              <p className="font-medium bg-slate-100 py-3 px-3 rounded-xl">{user?.displayName}</p>
+              <button onClick={handleLogOut} className="btn">
+                Log Out
+              </button>
+            </>
+          ) : (
+            <NavLink to="/login" className="btn">
+              Log In
+            </NavLink>
+          )}
+        </div>
       </div>
     </div>
   );

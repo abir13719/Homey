@@ -4,6 +4,7 @@ import { FaEye, FaEyeSlash, FaUser, FaFileImage } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import { updateProfile } from "firebase/auth";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
@@ -61,10 +62,13 @@ const Register = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Homey | Register</title>
+      </Helmet>
       <div className="container mx-auto  h-[calc(100vh-68px)] flex items-center justify-center">
         <div className="bg-white/30 backdrop-blur-3xl shadow-2xl p-4 rounded-xl w-[360px]">
           <form onSubmit={handleRegister} className="flex flex-col gap-3">
-            <h1 className="text-center text-2xl font-medium text-black">Please Register</h1>
+            <h1 className="text-center text-2xl font-medium text-black">Register Your Account</h1>
             <div className="flex items-center justify-between border border-black rounded-full py-2 px-4">
               <input
                 className="text-black w-full bg-transparent border-none outline-none font-medium placeholder:text-gray-800 placeholder:font-medium"
@@ -81,7 +85,6 @@ const Register = () => {
                 type="text"
                 name="photo"
                 placeholder="Photo URL"
-                required
               />
               <FaFileImage className="text-black" />
             </div>
@@ -127,12 +130,13 @@ const Register = () => {
                 value="Register"
               />
             </div>
-            <div className="flex justify-between text-black">
+            <div className="flex text-black">
               <span>
-                <a>Forget Password?</a>
-              </span>
-              <span>
-                <Link to="/login">Login</Link>
+                Already have an account? Please
+                <Link to="/login" className="font-medium">
+                  {" "}
+                  Login
+                </Link>
               </span>
             </div>
           </form>

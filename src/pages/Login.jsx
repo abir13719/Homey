@@ -3,6 +3,7 @@ import { MdEmail } from "react-icons/md";
 import { FaEye } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const { signInUser } = useContext(AuthContext);
@@ -19,6 +20,9 @@ const Login = () => {
   };
   return (
     <>
+      <Helmet>
+        <title>Homey | Login</title>
+      </Helmet>
       <div className="min-h-screen flex items-center justify-center">
         <div className="bg-white/30 backdrop-blur-3xl shadow-2xl p-4 rounded-xl w-[360px]">
           <form onSubmit={handleLogin} className="flex flex-col gap-3">
@@ -53,12 +57,13 @@ const Login = () => {
                 value="Login"
               />
             </div>
-            <div className="flex justify-between text-black">
+            <div className=" text-black">
+              Don&apos;t have an account? Please
               <span>
-                <a>Forget Password?</a>
-              </span>
-              <span>
-                <Link to="/register">Register</Link>
+                <Link to="/register" className="font-medium">
+                  {" "}
+                  Register
+                </Link>
               </span>
             </div>
           </form>
