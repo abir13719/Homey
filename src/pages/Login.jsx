@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import { MdEmail } from "react-icons/md";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaGithub, FaGoogle } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import { Helmet } from "react-helmet-async";
 
 const Login = () => {
-  const { signInUser } = useContext(AuthContext);
+  const { signInUser, signInWithGoogle } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
 
   const handleLogin = (e) => {
@@ -19,6 +19,13 @@ const Login = () => {
       .then((result) => console.log(result.user))
       .catch((error) => console.error(error));
   };
+
+  const handleGoogleLogIn = () => {
+    signInWithGoogle()
+      .then((result) => console.log(result.user))
+      .catch((error) => console.error(error));
+  };
+
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
   };
@@ -61,11 +68,25 @@ const Login = () => {
                 value="Login"
               />
             </div>
+            <div className="flex gap-2 items-center justify-center text-black border-b border-gray-800 py-2">
+              <span>Log in with</span>
+              <span onClick={handleGoogleLogIn} className="cursor-pointer">
+                <div className="flex items-center gap-1 bg-white/10 border border-black backdrop-blur-3xl hover:bg-white/20 hover:border-black p-1 rounded-md">
+                  <FaGoogle />
+                  Google
+                </div>
+              </span>
+              <span className="cursor-pointer">
+                <div className="flex items-center gap-1 bg-white/10 border border-black backdrop-blur-3xl hover:bg-white/20 hover:border-black p-1 rounded-md">
+                  <FaGithub />
+                  Github
+                </div>
+              </span>
+            </div>
             <div className=" text-black">
               Don&apos;t have an account? Please
               <span>
                 <Link to="/register" className="font-medium">
-                  {" "}
                   Register
                 </Link>
               </span>

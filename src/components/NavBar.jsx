@@ -72,7 +72,7 @@ const NavBar = () => {
               </button>
             </>
           ) : (
-            <NavLink to="/login" className="btn bg-cyan-300 hover:bg-cyan-400">
+            <NavLink to="/login" className="btn text-white bg-black hover:bg-black">
               Log In
             </NavLink>
           )}
