@@ -6,7 +6,6 @@ import { AuthContext } from "../provider/AuthProvider";
 
 const UpdateProfile = () => {
   const { user, updateUserProfile } = useContext(AuthContext);
-  console.log(user);
 
   const [inputName, setInputName] = useState(user.displayName);
   const [inputPhoto, setInputPhoto] = useState(user.photoURL);

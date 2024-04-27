@@ -7,7 +7,6 @@ const HomeDetails = () => {
   const allHomeInfo = useLoaderData();
   const { id } = useParams();
   const clickedHome = allHomeInfo.find((home) => home.id === id);
-  console.log(clickedHome);
   const {
     image1,
     image2,

@@ -22,7 +22,6 @@ const Register = () => {
     const email = form.get("email");
     const password = form.get("password");
     const cPassword = form.get("cPassword");
-    console.log(name, photo, email, password, cPassword);
 
     setProblem("");
     setSuccess("");
