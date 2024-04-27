@@ -5,10 +5,13 @@ import { Navigate, useLocation } from "react-router-dom";
 const PrivateRoutes = ({ children }) => {
   const { user, loading } = useContext(AuthContext);
   const location = useLocation();
-  console.log(location.pathname);
 
   if (loading) {
-    return <span>Loading...</span>;
+    return (
+      <div className="container mx-auto h-screen flex items-center justify-center">
+        <span className="text-center loading loading-spinner loading-lg"></span>;
+      </div>
+    );
   }
 
   if (user) {

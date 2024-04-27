@@ -1,9 +1,0 @@
-Pakeages Used
-1. Tailwind CSS
-2. DaisyUi
-3. React Router
-4. Swiper Slider
-5. React Icons
-6. React Helmet
-7. Firebase
-Animate.css

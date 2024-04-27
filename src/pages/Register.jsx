@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { MdEmail } from "react-icons/md";
 import { FaEye, FaEyeSlash, FaUser, FaFileImage } from "react-icons/fa";
 import { useContext, useState } from "react";
@@ -12,6 +12,7 @@ const Register = () => {
   const [success, setSuccess] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [showCPassword, setShowCPassword] = useState(false);
+  const navigate = useNavigate();
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -49,6 +50,7 @@ const Register = () => {
             photoURL: photo,
           }),
         setSuccess("User created successfully"),
+        navigate("/"),
         e.target.reset()
       )
       .catch((error) => setProblem(error.message.split("Error")[1].replace(/[()-.]/g, " ")));
