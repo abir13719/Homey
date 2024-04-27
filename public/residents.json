@@ -11,7 +11,7 @@
     "status": "sale",
     "area": "6,000 sq ft",
     "location": "Beverly Hills, CA",
-    "facilities": ["5 bedrooms", "infinity pool", "home theater"],
+    "facilities": ["5 Bedrooms", "Infinity Pool", "Home Theater"],
     "button": "View Property"
   },
   {
@@ -26,7 +26,7 @@
     "status": "sale",
     "area": "2,500 sq ft",
     "location": "Suburbia, OH",
-    "facilities": ["3 bedrooms", "backyard patio", "playroom"],
+    "facilities": ["3 Bedrooms", "Backyard Patio", "Playroom"],
     "button": "View Property"
   },
   {
@@ -41,7 +41,7 @@
     "status": "rent",
     "area": "1,200 sq ft",
     "location": "Downtown, NY",
-    "facilities": ["1 bedroom", "rooftop terrace", "gym"],
+    "facilities": ["1 Bedroom", "Rooftop Terrace", "Gym"],
     "button": "View Property"
   },
   {
@@ -56,7 +56,7 @@
     "status": "rent",
     "area": "800 sq ft",
     "location": "Lake Country, WA",
-    "facilities": ["2 bedrooms", "private dock", "fire pit"],
+    "facilities": ["2 Bedrooms", "Private Dock", "Fire Pit"],
     "button": "View Property"
   },
   {
@@ -71,7 +71,7 @@
     "status": "sale",
     "area": "1,800 sq ft",
     "location": "Miami Beach, FL",
-    "facilities": ["3 bedrooms", "balcony", "fitness center"],
+    "facilities": ["3 Bedrooms", "Balcony", "Fitness Center"],
     "button": "View Property"
   },
   {
@@ -86,7 +86,7 @@
     "status": "sale",
     "area": "3,500 sq ft",
     "location": "Aspen, CO",
-    "facilities": ["4 bedrooms", "hot tub", "ski-in/ski-out access"],
+    "facilities": ["4 Bedrooms", "Hot Tub", "Ski-in/Ski-out Access"],
     "button": "View Property"
   }
 ]

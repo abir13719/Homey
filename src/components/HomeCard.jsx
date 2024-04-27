@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
+
 const HomeCard = ({ home }) => {
-  const { image1, estate_title, price, status, area, location } = home;
+  const { image1, estate_title, price, status, area, location, id } = home;
   return (
     <div className="my-5 bg-green-100 p-5 rounded-xl">
       <img src={image1} />
@@ -13,6 +15,9 @@ const HomeCard = ({ home }) => {
         <p>Status: {status}</p>
         <p>{location}</p>
       </div>
+      <Link to={`/${id}`}>
+        <button className="btn w-full bg-black text-white hover:bg-black">View Details</button>
+      </Link>
     </div>
   );
 };

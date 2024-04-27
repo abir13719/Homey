@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { MdEmail } from "react-icons/md";
 import { FaEye, FaEyeSlash, FaGithub, FaGoogle } from "react-icons/fa";
 import { useContext, useState } from "react";
@@ -8,6 +8,9 @@ import { Helmet } from "react-helmet-async";
 const Login = () => {
   const { signInUser, signInWithGoogle, signInWithGitHub } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
+  const [problem, setProblem] = useState("");
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -15,9 +18,15 @@ const Login = () => {
     const email = form.get("email");
     const password = form.get("password");
 
+    setProblem("");
+
     signInUser(email, password)
-      .then((result) => console.log(result.user))
-      .catch((error) => console.error(error));
+      .then(
+        (result) => console.log(result.user),
+
+        navigate(location.state ? location.state : "/")
+      )
+      .catch(() => setProblem("User and password do not match"));
   };
 
   const handleGoogleLogIn = () => {
@@ -66,6 +75,8 @@ const Login = () => {
               />
               <span onClick={handleShowPassword}>{showPassword ? <FaEyeSlash /> : <FaEye />}</span>
             </div>
+
+            {problem && <p className="text-red-500 text-sm">{problem}</p>}
 
             <div>
               <input
