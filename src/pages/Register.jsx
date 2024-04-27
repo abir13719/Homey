@@ -67,7 +67,7 @@ const Register = () => {
         <title>Homey | Register</title>
       </Helmet>
       <div className="container mx-auto  h-[calc(100vh-68px)] flex items-center justify-center loginBg my-5">
-        <div className=" backdrop-blur-3xl shadow-2xl p-4 rounded-xl w-[360px] border border-black">
+        <div className=" backdrop-blur-3xl shadow-2xl p-4 rounded-xl w-[360px] border border-black animate__animated animate__lightSpeedInRight">
           <form onSubmit={handleRegister} className="flex flex-col gap-3">
             <h1 className="text-center text-2xl font-medium text-black">Register Your Account</h1>
             <div className="flex items-center justify-between border border-black rounded-full py-2 px-4">

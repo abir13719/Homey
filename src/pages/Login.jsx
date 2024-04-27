@@ -6,7 +6,7 @@ import { AuthContext } from "../provider/AuthProvider";
 import { Helmet } from "react-helmet-async";
 
 const Login = () => {
-  const { signInUser, signInWithGoogle } = useContext(AuthContext);
+  const { signInUser, signInWithGoogle, signInWithGitHub } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
 
   const handleLogin = (e) => {
@@ -26,6 +26,12 @@ const Login = () => {
       .catch((error) => console.error(error));
   };
 
+  const handleGithubLogIn = () => {
+    signInWithGitHub()
+      .then((result) => console.log(result.user))
+      .catch((error) => console.error(error));
+  };
+
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
   };
@@ -35,7 +41,7 @@ const Login = () => {
         <title>Homey | Login</title>
       </Helmet>
       <div className="container mx-auto min-h-screen flex items-center justify-center loginBg my-5">
-        <div className="backdrop-blur-3xl shadow-2xl p-4 rounded-xl w-[360px] border-black border">
+        <div className="backdrop-blur-3xl shadow-2xl p-4 rounded-xl w-[360px] border-black border animate__animated animate__lightSpeedInLeft">
           <form onSubmit={handleLogin} className="flex flex-col gap-3">
             <h1 className="text-center text-2xl font-medium text-black">Please Login</h1>
 
@@ -76,7 +82,7 @@ const Login = () => {
                   Google
                 </div>
               </span>
-              <span className="cursor-pointer">
+              <span onClick={handleGithubLogIn} className="cursor-pointer">
                 <div className="flex items-center gap-1 bg-white/10 border border-black backdrop-blur-3xl hover:bg-white/20 hover:border-black p-1 rounded-md">
                   <FaGithub />
                   Github
@@ -87,6 +93,7 @@ const Login = () => {
               Don&apos;t have an account? Please
               <span>
                 <Link to="/register" className="font-medium">
+                  {" "}
                   Register
                 </Link>
               </span>

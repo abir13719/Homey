@@ -52,7 +52,7 @@ const NavBar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[100] p-2 shadow bg-base-100 rounded-box w-52"
           >
             {navLinks}
           </ul>
@@ -66,8 +66,15 @@ const NavBar = () => {
         <div className="flex items-center gap-2">
           {user ? (
             <>
-              <p className="font-medium bg-slate-100 py-3 px-3 rounded-xl">{user?.displayName}</p>
-              <button onClick={handleLogOut} className="btn">
+              <div className="relative h-11 w-20">
+                <div className="absolute top-0 right-0 bottom-0 opacity-100 hover:opacity-0">
+                  <img className="h-10 w-10 rounded-lg" src={user.photoURL} />
+                </div>
+                <div className=" absolute h-full top-0 right-0 text-white bg-black hover:bg-black left-0 bottom-0 rounded-lg opacity-0 hover:opacity-100 transition-all ease-in">
+                  <p className="text-nowrap mt-1 text-center">{user.displayName}</p>
+                </div>
+              </div>
+              <button onClick={handleLogOut} className="btn text-white bg-black hover:bg-black">
                 Log Out
               </button>
             </>
